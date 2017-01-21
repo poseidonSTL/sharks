@@ -22,6 +22,8 @@ global.waveSpeed = global.waveRideSpeed + (sprite_get_height(sp_wave) / global.w
 global.waveGrowTime = room_height / global.waveSpeed;
 global.waveStartScale = 0.2;
 
+global.waveFadeTime = 15;
+
 //Shark data
 global.sharkReachTimeBaseSeconds = 4
 global.sharkReachTimeMinSeconds = 0.25;
@@ -47,11 +49,11 @@ global.boardUncollectedFadeTime = 3.0 * global.gameSpeed;
 global.boardPowerupTime = 5.0 * global.gameSpeed;
 global.boardPowerupFadeTime = 1.5 * global.gameSpeed;
 
-global.boardPowerupStartSpawn = 0.1 * global.gameSpeed;
-global.boardSpawnTime = 45.0 * global.gameSpeed;
+global.boardPowerupStartSpawn = 20.0 * global.gameSpeed;
+global.boardSpawnTime = 30.0 * global.gameSpeed;
 
-global.boardSpawnMinY = room_height * (7/12);
-global.boardSpawnMaxY = room_height * (5/6);
+global.boardSpawnMinY = room_height / 2;
+global.boardSpawnMaxY = room_height * (7/12);
 
 global.boardSpinTime = global.boardPowerupFadeTime;
 global.flyoutSpeed = 10;

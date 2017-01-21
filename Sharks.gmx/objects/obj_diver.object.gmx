@@ -573,7 +573,7 @@ if(pushTime &gt; global.wavePushTime)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_alpha = 0.5;
+            <string>fadeTime = 1;
 potent = false;
 </string>
           </argument>
