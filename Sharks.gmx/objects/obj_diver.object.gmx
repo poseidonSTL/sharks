@@ -175,6 +175,10 @@
         vspeed = 0;
     }
 }
+if( y &gt; room_height - sprite_height)
+{
+    y = room_height - sprite_height;
+}
 </string>
           </argument>
         </arguments>
