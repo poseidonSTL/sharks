@@ -1,6 +1,6 @@
 //Global settings
 global.gameSpeed = 30;
-global.levelupTime = 10 * global.gameSpeed;
+global.levelupTime = 5 * global.gameSpeed;
 
 //Diver controls
 global.wavePushTime = 10;
