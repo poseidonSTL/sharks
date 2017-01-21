@@ -219,15 +219,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if( y &lt;= sprite_height/2)
+            <string>/// Diver Y Position
+
+// Diver reaches the rest position near the top of the screen.
+if (y &lt;= global.diver_resting_y_position)
 {
-    y = sprite_height/2
-    if( state == "normal")
+    y = global.diver_resting_y_position;
+    if(state == "normal")
     {
         vspeed = 0;
     }
 }
-if( y &gt; room_height - sprite_height/2)
+
+// Diver reaches the bottom of the screen.
+if (y &gt; room_height - sprite_height/2)
 {
     y = room_height - sprite_height/2;
 }
@@ -271,7 +276,7 @@ if( y &gt; room_height - sprite_height/2)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Lane switching code
+            <string>/// Switch Lanes
 
 //motion
 distanceToTravel = global.laneX[targetLane] - global.laneX[prevLane];
@@ -691,7 +696,7 @@ potent = false;
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>global.diver_resting_y_position</string>
           </argument>
         </arguments>
       </action>

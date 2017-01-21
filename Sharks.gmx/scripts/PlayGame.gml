@@ -18,6 +18,7 @@ global.laneX[2] = room_width * (5/6);
 
 global.diverScaleAtTopOfWave = 1.25;
 
+global.diver_resting_y_position = 100;
 
 //Wave stuff 
 global.waveSpeed = global.waveRideSpeed + (sprite_get_height(sp_wave) / global.wavePushTime);
