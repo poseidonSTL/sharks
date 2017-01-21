@@ -17,6 +17,9 @@
     <script>scripts\GetEnemySpawnTime.gml</script>
     <script>scripts\GetSharkHuntSpeed.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\scoreFont</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_diver</object>
     <object>objects\obj_shark</object>

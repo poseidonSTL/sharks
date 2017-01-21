@@ -327,7 +327,7 @@ potent = false;
         <arguments>
           <argument>
             <kind>2</kind>
-            <string>You ded!</string>
+            <string>'You ded! Score: ' +string(score)</string>
           </argument>
         </arguments>
       </action>
