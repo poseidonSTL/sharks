@@ -22,6 +22,7 @@
     <sprite>sprites\sp_button</sprite>
     <sprites name="menus">
       <sprite>sprites\sp_start</sprite>
+      <sprite>sprites\sp_game_over</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -50,11 +51,13 @@
     </objects>
     <objects name="menus">
       <object>objects\obj_start</object>
+      <object>objects\obj_game_over</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>
     <room>rooms\rm_main</room>
+    <room>rooms\rm_game_over</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
