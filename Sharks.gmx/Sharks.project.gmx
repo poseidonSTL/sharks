@@ -32,6 +32,7 @@
     <script>scripts\GetEnemySpawnTime.gml</script>
     <script>scripts\GetSharkHuntTime.gml</script>
     <script>scripts\PlayGame.gml</script>
+    <script>scripts\InitialStartup.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\smallfont</font>
