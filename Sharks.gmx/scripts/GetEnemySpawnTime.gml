@@ -1,10 +1,10 @@
-spawnMin = global.sharkSpawnMinBaseSeconds - (global.level * 0.05);
+spawnMin = global.sharkSpawnMinBaseSeconds - (global.level * 0.1);
 if(spawnMin < global.sharkSpawnMinMinSeconds)
 {
     spawnMin = global.sharkSpawnMinMinSeconds;
 }
 
-spawnMax = global.sharkSpawnMaxBaseSeconds - (global.level * 0.075);
+spawnMax = global.sharkSpawnMaxBaseSeconds - (global.level * 0.115);
 if(spawnMax < global.sharkSpawnMaxMinSeconds)
 {
     spawnMax = global.sharkSpawnMaxMinSeconds;

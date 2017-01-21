@@ -9,13 +9,14 @@
     <sprite>sprites\sp_diver</sprite>
     <sprite>sprites\sp_shark</sprite>
     <sprite>sprites\sp_wave</sprite>
+    <sprite>sprites\sp_board</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\GetSharkSwimSpeed.gml</script>
     <script>scripts\GetEnemySpawnTime.gml</script>
-    <script>scripts\GetSharkHuntSpeed.gml</script>
+    <script>scripts\GetSharkHuntTime.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\scoreFont</font>
@@ -28,6 +29,7 @@
     <object>objects\obj_waveController</object>
     <object>objects\obj_setup</object>
     <object>objects\obj_master</object>
+    <object>objects\obj_surfBoard</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>

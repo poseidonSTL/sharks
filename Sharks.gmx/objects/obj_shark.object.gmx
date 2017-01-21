@@ -28,6 +28,8 @@
             <string>vspeed = -GetSharkSwimSpeed();
 state = "normal"
 waveTime = 0;
+huntTime = 0;
+huntTimeTotal = 0;
 </string>
           </argument>
         </arguments>
@@ -54,6 +56,7 @@ waveTime = 0;
 &amp;&amp; state == "normal")
 {
     state = "hunt";
+    huntTimeTotal = GetSharkHuntTime();
 }
 </string>
           </argument>
@@ -95,6 +98,36 @@ waveTime = 0;
       </action>
       <action>
         <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>timeFactor = huntTime / huntTimeTotal;
+distance = point_distance(x,y,obj_diver.x,obj_diver.y);
+distanceToMove = timeFactor * distance;
+
+huntTime += 1;
+if(huntTime &gt; huntTimeTotal)
+{
+    huntTime = huntTimeTotal;
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>105</id>
         <kind>0</kind>
         <userelative>-1</userelative>
@@ -117,7 +150,7 @@ waveTime = 0;
           </argument>
           <argument>
             <kind>0</kind>
-            <string>GetSharkHuntSpeed()</string>
+            <string>distanceToMove</string>
           </argument>
         </arguments>
       </action>

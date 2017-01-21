@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//global settings
+            <string>//Global settings
 global.gameSpeed = 30;
 global.levelupTime = 10 * global.gameSpeed;
 
-//diver controls
+//Diver controls
 global.wavePushTime = 10;
 global.wavePushDistance = room_height / 6;
 global.waveRideSpeed = global.wavePushDistance / global.wavePushTime;
@@ -47,14 +47,14 @@ global.diverScaleAtTopOfWave = 1.25;
 //Wave stuff 
 global.waveSpeed = global.waveRideSpeed + (sprite_get_height(sp_wave) / global.wavePushTime);
 global.waveGrowTime = room_height / global.waveSpeed;
-global.waveStartScale = 0.1;
+global.waveStartScale = 0.2;
 
-//shark data
-global.sharkReachTimeBaseSeconds = 6
-global.sharkReachTimeMinSeconds = 0.5;
+//Shark data
+global.sharkReachTimeBaseSeconds = 4
+global.sharkReachTimeMinSeconds = 0.25;
 
-global.sharkKillTimeBaseSeconds = 0.75;
-global.sharkKillTimeMinSeconds = 0.05;
+global.sharkKillTimeBaseSeconds = 2.0;
+global.sharkKillTimeMinSeconds = 0.25;
 
 global.sharkSpawnStartSeconds = 1.5;
 global.sharkSpawnMinBaseSeconds = 1;
@@ -66,6 +66,23 @@ global.sharkSpinoutTime = 0.35;
 
 global.sharkScaleAtTopOfWave = 1.25;
 global.sharkTimeToTopOfWave = 1.2 * global.gameSpeed;
+
+//Powerup Data
+global.boardUncollectedTime = 10.0 * global.gameSpeed;
+global.boardUncollectedFadeTime = 3.0 * global.gameSpeed;
+
+global.boardPowerupTime = 5.0 * global.gameSpeed;
+global.boardPowerupFadeTime = 1.5 * global.gameSpeed;
+
+global.boardPowerupStartSpawn = 0.1 * global.gameSpeed;
+global.boardSpawnTime = 60.0 * global.gameSpeed;
+
+global.boardSpawnMinY = room_height * (7/12);
+global.boardSpawnMaxY = room_height * (5/6);
+
+global.boardSpinTime = global.boardPowerupFadeTime;
+global.flyoutSpeed = 10;
+
 </string>
           </argument>
         </arguments>
