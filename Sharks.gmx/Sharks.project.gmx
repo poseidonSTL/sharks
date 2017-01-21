@@ -12,6 +12,11 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\GetSharkSwimSpeed.gml</script>
+    <script>scripts\GetEnemySpawnTime.gml</script>
+    <script>scripts\GetSharkHuntSpeed.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_diver</object>
     <object>objects\obj_shark</object>
@@ -19,6 +24,7 @@
     <object>objects\obj_spawner</object>
     <object>objects\obj_waveController</object>
     <object>objects\obj_setup</object>
+    <object>objects\obj_master</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>

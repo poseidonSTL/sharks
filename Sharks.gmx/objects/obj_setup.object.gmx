@@ -25,12 +25,28 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.wavePushTime = 10;
-global.timeRecoverOneBlock = 30;
+            <string>//global settings
+global.gameSpeed = 30;
+global.levelupTime = 10 * global.gameSpeed;
+
+//diver controls
+global.wavePushTime = 10;
+global.timeRecoverOneBlock = global.gameSpeed;
 global.waveSpeed = room_height / 3 / global.wavePushTime;
 global.recoverSpeed = room_height / 3 / global.timeRecoverOneBlock;
 
-global.waveImmuneTime = 10;
+//shark data
+global.sharkReachTimeBaseSeconds = 6
+global.sharkReachTimeMinSeconds = 0.5;
+
+global.sharkKillTimeBaseSeconds = 0.75;
+global.sharkKillTimeMinSeconds = 0.05;
+
+global.sharkSpawnStartSeconds = 1.5;
+global.sharkSpawnMinBaseSeconds = 1;
+global.sharkSpawnMinMinSeconds = 0.1;
+global.sharkSpawnMaxBaseSeconds = 2;
+global.sharkSpawnMaxMinSeconds = 0.5;
 </string>
           </argument>
         </arguments>
