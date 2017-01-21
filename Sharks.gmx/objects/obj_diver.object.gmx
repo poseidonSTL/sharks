@@ -682,6 +682,7 @@ potent = false;
             <string>if(prevLane &lt; 2)
 {
     targetLane = prevLane + 1;
+     audio_play_sound(swimmerMove, 10, false);
 }
 
 laneSwitchTime = 1;
@@ -766,6 +767,7 @@ laneSwitchTime = 1;
             <string>if(prevLane &gt; 0)
 {
     targetLane = prevLane - 1;
+    audio_play_sound(swimmerMove, 10, false);
 }
 
 laneSwitchTime = 1;
