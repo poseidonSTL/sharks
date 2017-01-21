@@ -16,6 +16,9 @@
     <object>objects\obj_diver</object>
     <object>objects\obj_shark</object>
     <object>objects\obj_wave</object>
+    <object>objects\obj_spawner</object>
+    <object>objects\obj_waveController</object>
+    <object>objects\obj_setup</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>

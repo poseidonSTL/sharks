@@ -53,6 +53,8 @@
   <instances>
     <instance objName="obj_diver" x="512" y="0" name="inst_DC8A477F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_spawner" x="0" y="0" name="inst_0DFAAA0F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_waveController" x="992" y="0" name="inst_7EC1C085" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_setup" x="32" y="0" name="inst_069756A9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
