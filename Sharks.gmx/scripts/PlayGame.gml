@@ -19,6 +19,7 @@ global.laneX[2] = room_width * (5/6);
 global.diverScaleAtTopOfWave = 1.25;
 
 global.diver_resting_y_position = 100;
+global.driver_miles_per_hour = 1.864; // Based on moderate pace for an athlethe.
 
 //Wave stuff 
 global.waveSpeed = global.waveRideSpeed + (sprite_get_height(sp_wave) / global.wavePushTime);
