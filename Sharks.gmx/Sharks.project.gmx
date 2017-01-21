@@ -34,7 +34,8 @@
     <script>scripts\PlayGame.gml</script>
   </scripts>
   <fonts name="fonts">
-    <font>fonts\scoreFont</font>
+    <font>fonts\smallfont</font>
+    <font>fonts\bigfont</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_diver</object>

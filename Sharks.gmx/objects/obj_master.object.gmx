@@ -149,8 +149,9 @@ global.level_start_time = current_time;
           <argument>
             <kind>1</kind>
             <string>/// Draw the score
-draw_set_font(scoreFont);
+draw_set_font(smallfont);
 draw_set_color(c_white);
+draw_set_halign(fa_left);
 draw_text(4, 4, "Distance Swam: " + string_format(global.distance_swam, 0, 3) + " miles");
 
 </string>
