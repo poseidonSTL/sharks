@@ -12,6 +12,7 @@
     <sprite>sprites\sp_board</sprite>
     <sprite>sprites\sp_hammer</sprite>
     <sprite>sprites\sp_squid</sprite>
+    <sprite>sprites\sp_button</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>

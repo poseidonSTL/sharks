@@ -282,7 +282,7 @@ alarm[1] = global.boardUncollectedTime;
           </argument>
           <argument>
             <kind>0</kind>
-            <string>obj_diver.y + obj_diver.sprite_height/2</string>
+            <string>obj_diver.y</string>
           </argument>
         </arguments>
       </action>

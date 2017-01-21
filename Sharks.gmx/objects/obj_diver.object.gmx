@@ -171,17 +171,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if( y &lt;= 0)
+            <string>if( y &lt;= sprite_height/2)
 {
-    y = 0
+    y = sprite_height/2
     if( state == "normal")
     {
         vspeed = 0;
     }
 }
-if( y &gt; room_height - sprite_height)
+if( y &gt; room_height - sprite_height/2)
 {
-    y = room_height - sprite_height;
+    y = room_height - sprite_height/2;
 }
 </string>
           </argument>
