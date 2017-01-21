@@ -75,7 +75,7 @@ global.boardPowerupTime = 5.0 * global.gameSpeed;
 global.boardPowerupFadeTime = 1.5 * global.gameSpeed;
 
 global.boardPowerupStartSpawn = 0.1 * global.gameSpeed;
-global.boardSpawnTime = 60.0 * global.gameSpeed;
+global.boardSpawnTime = 45.0 * global.gameSpeed;
 
 global.boardSpawnMinY = room_height * (7/12);
 global.boardSpawnMaxY = room_height * (5/6);

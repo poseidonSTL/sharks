@@ -6,8 +6,8 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\sp_diver</sprite>
     <sprite>sprites\sp_shark</sprite>
+    <sprite>sprites\sp_diver</sprite>
     <sprite>sprites\sp_wave</sprite>
     <sprite>sprites\sp_board</sprite>
   </sprites>
