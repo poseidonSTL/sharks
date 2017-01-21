@@ -34,6 +34,11 @@ global.wavePushTime = 10;
 global.timeRecoverOneBlock = global.gameSpeed;
 global.waveSpeed = room_height / 3 / global.wavePushTime;
 global.recoverSpeed = room_height / 3 / global.timeRecoverOneBlock;
+global.laneSwitchTime = 0.20 * global.gameSpeed;
+
+global.laneX[0] = room_width / 6;
+global.laneX[1] = room_width / 2;
+global.laneX[2] = room_width * (5/6);
 
 //shark data
 global.sharkReachTimeBaseSeconds = 6
