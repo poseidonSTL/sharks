@@ -10,6 +10,8 @@
     <sprite>sprites\sp_diver</sprite>
     <sprite>sprites\sp_wave</sprite>
     <sprite>sprites\sp_board</sprite>
+    <sprite>sprites\sp_hammer</sprite>
+    <sprite>sprites\sp_squid</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -23,13 +25,18 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_diver</object>
-    <object>objects\obj_shark</object>
     <object>objects\obj_wave</object>
     <object>objects\obj_spawner</object>
     <object>objects\obj_waveController</object>
     <object>objects\obj_setup</object>
     <object>objects\obj_master</object>
     <object>objects\obj_surfBoard</object>
+    <objects name="enemies">
+      <object>objects\obj_enemy</object>
+      <object>objects\obj_shark</object>
+      <object>objects\obj_squid</object>
+      <object>objects\obj_hammer</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>

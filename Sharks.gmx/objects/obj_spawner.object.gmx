@@ -61,7 +61,10 @@ alarm[1] = global.boardSpawnTime;
             <kind>1</kind>
             <string>colNum = floor(random(3));
 spawnX = (room_width * (1/6)) + (colNum * (room_width/3));
-instance_create(spawnX, room_height, obj_shark);
+spawnY = room_height + sprite_get_height(sp_shark);
+
+enemyToSpawn = floor(random(numEnemies));
+instance_create(spawnX, spawnY, enemyType[enemyToSpawn]);
 
 spawnTime = GetEnemySpawnTime();
 alarm[0] = spawnTime;
@@ -87,7 +90,12 @@ alarm[0] = spawnTime;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[0] = global.sharkSpawnStartSeconds * global.gameSpeed;
+            <string>enemyType[0] = obj_shark;
+enemyType[1] = obj_squid;
+enemyType[2] = obj_hammer;
+numEnemies = 3;
+
+alarm[0] = global.sharkSpawnStartSeconds * global.gameSpeed;
 alarm[1] = global.boardPowerupStartSpawn;
 
 </string>
