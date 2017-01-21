@@ -6,11 +6,14 @@
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\swimmerMove</sound>
+    <sound>sound\boneBreakCrush</sound>
     <sound>sound\sharkMove</sound>
     <sound>sound\squidMove</sound>
+    <sound>sound\screamGirl</sound>
     <sound>sound\wave</sound>
     <sound>sound\ocean</sound>
     <sound>sound\boardBreak</sound>
+    <sound>sound\screamBoy</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sp_shark</sprite>
