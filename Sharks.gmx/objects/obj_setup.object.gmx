@@ -46,6 +46,8 @@ global.diverScaleAtTopOfWave = 1.25;
 
 //Wave stuff 
 global.waveSpeed = global.waveRideSpeed + (sprite_get_height(sp_wave) / global.wavePushTime);
+global.waveGrowTime = room_height / global.waveSpeed;
+global.waveStartScale = 0.1;
 
 //shark data
 global.sharkReachTimeBaseSeconds = 6
