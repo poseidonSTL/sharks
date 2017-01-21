@@ -9,13 +9,15 @@ global.waveRideSpeed = global.wavePushDistance / global.wavePushTime;
 global.timeRecoverOneBlock = global.gameSpeed;
 
 global.recoverSpeed = global.wavePushDistance / global.timeRecoverOneBlock;
-global.laneSwitchTime = 0.20 * global.gameSpeed;
+global.laneSwitchTime = 0.35 * global.gameSpeed;
+global.laneSwitchMaxTilt = 20;
 
 global.laneX[0] = room_width / 6;
 global.laneX[1] = room_width / 2;
 global.laneX[2] = room_width * (5/6);
 
 global.diverScaleAtTopOfWave = 1.25;
+
 
 //Wave stuff 
 global.waveSpeed = global.waveRideSpeed + (sprite_get_height(sp_wave) / global.wavePushTime);
