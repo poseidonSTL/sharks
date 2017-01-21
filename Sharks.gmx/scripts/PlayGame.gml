@@ -9,7 +9,7 @@ global.waveRideSpeed = global.wavePushDistance / global.wavePushTime;
 global.timeRecoverOneBlock = global.gameSpeed;
 
 global.recoverSpeed = global.wavePushDistance / global.timeRecoverOneBlock;
-global.laneSwitchTime = 0.35 * global.gameSpeed;
+global.laneSwitchTime = 0.25 * global.gameSpeed;
 global.laneSwitchMaxTilt = 20;
 
 global.laneX[0] = room_width / 6;
@@ -39,7 +39,7 @@ global.sharkSpawnMinMinSeconds = 0.1;
 global.sharkSpawnMaxBaseSeconds = 2;
 global.sharkSpawnMaxMinSeconds = 0.5;
 
-global.sharkSpinoutTime = 0.35;
+global.sharkSpinoutTime = 0.30;
 
 global.sharkScaleAtTopOfWave = 1.25;
 global.sharkTimeToTopOfWave = 1.2 * global.gameSpeed;

@@ -177,6 +177,30 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>prevLaneCommand</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>"none"</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="3" enumb="0">
       <action>
@@ -266,7 +290,7 @@ x = resultX;
 
 //tilt
 maxTilt = global.laneSwitchMaxTilt;
-if(prevLane &lt;  targetLane)
+if(prevLaneCommand = "right")
 {
     maxTilt = -maxTilt;
 }
@@ -721,6 +745,7 @@ potent = false;
      audio_play_sound(swimmerMove, 10, false);
 }
 
+prevLaneCommand = "right";
 laneSwitchTime = 1;
 </string>
           </argument>
@@ -806,6 +831,7 @@ laneSwitchTime = 1;
     audio_play_sound(swimmerMove, 10, false);
 }
 
+prevLaneCommand = "left";
 laneSwitchTime = 1;
 </string>
           </argument>
@@ -888,9 +914,10 @@ laneSwitchTime = 1;
             <string>if(prevLane &lt; 2)
 {
     targetLane = prevLane + 1;
-     audio_play_sound(swimmerMove, 10, false);
+    audio_play_sound(swimmerMove, 10, false);
 }
 
+prevLaneCommand = "right";
 laneSwitchTime = 1;
 </string>
           </argument>
@@ -976,6 +1003,7 @@ laneSwitchTime = 1;
     audio_play_sound(swimmerMove, 10, false);
 }
 
+prevLaneCommand = "left";
 laneSwitchTime = 1;
 </string>
           </argument>
