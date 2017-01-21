@@ -61,6 +61,9 @@ global.sharkSpawnMaxBaseSeconds = 2;
 global.sharkSpawnMaxMinSeconds = 0.5;
 
 global.sharkSpinoutTime = 0.35;
+
+global.sharkScaleAtTopOfWave = 1.25;
+global.sharkTimeToTopOfWave = 1.2 * global.gameSpeed;
 </string>
           </argument>
         </arguments>
