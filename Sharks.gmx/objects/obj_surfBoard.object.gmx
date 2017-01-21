@@ -334,6 +334,8 @@ alarm[1] = global.boardUncollectedTime;
             <kind>1</kind>
             <string>state = "active";
 obj_diver.powerup = true;
+image_alpha = 1.0
+fadeTime = 0;
 alarm[0] = -1;
 alarm[1] = -1;
 alarm[2] = global.boardPowerupTime - global.boardPowerupFadeTime;

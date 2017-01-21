@@ -4,3 +4,4 @@ if(killTime < global.sharkReachTimeMinSeconds)
     killTime = global.sharkReachTimeMinSeconds;
 }
 return (room_height / killTime / global.gameSpeed);
+

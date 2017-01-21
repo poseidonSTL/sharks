@@ -30,6 +30,8 @@ state = "normal"
 waveTime = 0;
 huntTime = 0;
 huntTimeTotal = 0;
+startX = 0;
+startY = 0;
 </string>
           </argument>
         </arguments>
@@ -57,6 +59,9 @@ huntTimeTotal = 0;
 {
     state = "hunt";
     huntTimeTotal = GetSharkHuntTime();
+    
+    startX = x;
+    startY = y;
 }
 </string>
           </argument>
@@ -112,9 +117,8 @@ huntTimeTotal = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>timeFactor = huntTime / huntTimeTotal;
-distance = point_distance(x,y,obj_diver.x,obj_diver.y);
-distanceToMove = timeFactor * distance;
+            <string>distance = point_distance(startX,startY,obj_diver.x,obj_diver.y);
+distanceToMove = distance / huntTimeTotal;
 
 huntTime += 1;
 if(huntTime &gt; huntTimeTotal)
