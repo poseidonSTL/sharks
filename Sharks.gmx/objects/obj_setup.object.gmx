@@ -52,6 +52,8 @@ global.sharkSpawnMinBaseSeconds = 1;
 global.sharkSpawnMinMinSeconds = 0.1;
 global.sharkSpawnMaxBaseSeconds = 2;
 global.sharkSpawnMaxMinSeconds = 0.5;
+
+global.sharkSpinoutTime = 0.35;
 </string>
           </argument>
         </arguments>
