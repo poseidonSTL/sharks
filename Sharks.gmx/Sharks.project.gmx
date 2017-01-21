@@ -13,6 +13,9 @@
     <sprite>sprites\sp_hammer</sprite>
     <sprite>sprites\sp_squid</sprite>
     <sprite>sprites\sp_button</sprite>
+    <sprites name="menus">
+      <sprite>sprites\sp_start</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -20,6 +23,7 @@
     <script>scripts\GetSharkSwimSpeed.gml</script>
     <script>scripts\GetEnemySpawnTime.gml</script>
     <script>scripts\GetSharkHuntTime.gml</script>
+    <script>scripts\PlayGame.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\scoreFont</font>
@@ -29,7 +33,6 @@
     <object>objects\obj_wave</object>
     <object>objects\obj_spawner</object>
     <object>objects\obj_waveController</object>
-    <object>objects\obj_setup</object>
     <object>objects\obj_master</object>
     <object>objects\obj_surfBoard</object>
     <objects name="enemies">
@@ -38,8 +41,12 @@
       <object>objects\obj_squid</object>
       <object>objects\obj_hammer</object>
     </objects>
+    <objects name="menus">
+      <object>objects\obj_start</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_start</room>
     <room>rooms\rm_main</room>
   </rooms>
   <help>
