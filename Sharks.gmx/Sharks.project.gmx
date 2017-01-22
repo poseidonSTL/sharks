@@ -35,7 +35,6 @@
       <sprite>sprites\sp_start</sprite>
       <sprite>sprites\sp_game_over</sprite>
     </sprites>
-    <sprite>sprites\sprite10</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\background0</background>
