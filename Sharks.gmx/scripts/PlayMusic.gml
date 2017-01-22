@@ -1,5 +1,6 @@
 var musicIndex = argument0;
-var crossfade = argument1;
+var volume = argument1;
+var crossfade = argument2;
 
 if (global.currentMusic >= 0)
 {
@@ -7,4 +8,4 @@ if (global.currentMusic >= 0)
 }
 global.currentMusic = audio_play_sound(musicIndex, 0, true);
 audio_sound_gain(global.currentMusic, 0, 0);
-audio_sound_gain(global.currentMusic, 1, crossfade);
+audio_sound_gain(global.currentMusic, volume, crossfade);

@@ -334,7 +334,7 @@ else if (keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord('A')))
     if(prevLane &gt; 0)
     {
         targetLane = prevLane - 1;
-        audio_play_sound(swimmerMove, 10, false);
+        PlaySFX(swimmerMove, 0.5);
     }
     
     prevLaneCommand = "left";
@@ -345,7 +345,7 @@ else if (keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord('D')))
     if(prevLane &lt; 2)
     {
         targetLane = prevLane + 1;
-        audio_play_sound(swimmerMove, 10, false);
+        PlaySFX(swimmerMove, 0.5);
     }
     
     prevLaneCommand = "right";
@@ -563,7 +563,7 @@ if(pushTime &gt; global.wavePushTime)
             <string>/// Death Spin
 if (!alive)
 {
-    image_angle += 1;
+    image_angle += 1.5;
 }
 </string>
           </argument>
@@ -632,7 +632,7 @@ if (obj_diver.alive)
     {
       global.cause_of_death = "squid";
     }
-    PlayMusic(mus_Death_Theme, 0);
+    PlayMusic(mus_Death_Theme, 1, 0);
     
     obj_diver.alive = false;
     obj_diver.image_speed = 0;
@@ -642,6 +642,8 @@ if (obj_diver.alive)
       instance_destroy();
     }
     obj_diver.alarm[0] = room_speed * 5;
+    PlaySFX(screamBoy, 1);
+    PlaySFX(boneBreakCrush_excerpt, 1);
 }
 </string>
           </argument>

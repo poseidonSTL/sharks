@@ -14,6 +14,7 @@
     <sound>sound\ocean</sound>
     <sound>sound\boardBreak</sound>
     <sound>sound\screamBoy</sound>
+    <sound>sound\boneBreakCrush_excerpt</sound>
     <sounds name="music">
       <sound>sound\mus_Death_Theme</sound>
       <sound>sound\mus_Dreamy_Ocean_Theme</sound>
@@ -47,6 +48,7 @@
     <script>scripts\PlayGame.gml</script>
     <script>scripts\InitialStartup.gml</script>
     <script>scripts\PlayMusic.gml</script>
+    <script>scripts\PlaySFX.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\smallfont</font>
