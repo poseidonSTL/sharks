@@ -20,6 +20,7 @@
       <sound>sound\mus_Dreamy_Ocean_Theme</sound>
       <sound>sound\mus_Gameplay_Music</sound>
       <sound>sound\mus_Surf_theme</sound>
+      <sound>sound\mus_Gameplay_Musicv2</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
