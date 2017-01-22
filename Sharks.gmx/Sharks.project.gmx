@@ -23,6 +23,7 @@
     <sprite>sprites\sp_hammer</sprite>
     <sprite>sprites\sp_squid</sprite>
     <sprite>sprites\sp_button</sprite>
+    <sprite>sprites\sp_surfer</sprite>
     <sprites name="menus">
       <sprite>sprites\sp_start</sprite>
       <sprite>sprites\sp_game_over</sprite>
