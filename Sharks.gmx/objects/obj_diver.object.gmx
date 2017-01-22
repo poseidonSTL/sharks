@@ -334,7 +334,7 @@ else if (keyboard_check_pressed(vk_left) || keyboard_check_pressed(ord('A')))
     if(prevLane &gt; 0)
     {
         targetLane = prevLane - 1;
-        PlaySFX(swimmerMove, 0.5);
+        PlaySFX(swimmerMove, 0.33);
     }
     
     prevLaneCommand = "left";
@@ -345,7 +345,7 @@ else if (keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord('D')))
     if(prevLane &lt; 2)
     {
         targetLane = prevLane + 1;
-        PlaySFX(swimmerMove, 0.5);
+        PlaySFX(swimmerMove, 0.33);
     }
     
     prevLaneCommand = "right";
