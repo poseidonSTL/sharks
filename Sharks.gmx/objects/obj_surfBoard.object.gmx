@@ -364,7 +364,7 @@ alarm[0] = -1;
 alarm[1] = -1;
 alarm[2] = global.boardPowerupTime - global.boardPowerupFadeTime;
 alarm[3] = global.boardPowerupTime;
-PlaySFX(mus_Surf_theme_amplified, 1);
+PlaySFX(mus_Surf_theme_amplified, 0.5);
 </string>
           </argument>
         </arguments>
