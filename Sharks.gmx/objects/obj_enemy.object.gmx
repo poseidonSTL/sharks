@@ -25,8 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>vspeed = -GetEnemySwimSpeed();
-image_speed = vspeed / 32;
+            <string>defaultVSpeed = -GetEnemySwimSpeed();
+vspeed = defaultVSpeed;
+
+image_speed = defaultVSpeed / 40;
+if (object_index == obj_squid)
+{  
+  image_speed *= 3/8;
+}
+
 state = "normal"
 waveTime = 0;
 huntTime = 0;
@@ -55,10 +62,19 @@ startY = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (state == "normal")
+            <string>var paused = object_index == obj_squid &amp;&amp; image_index &lt; 5;
+
+if (state == "normal")
 {
     // Move normally
-
+    if (paused)
+    {  
+      vspeed = 0;
+    }
+    else
+    {
+      vspeed = defaultVSpeed;
+    }
 
     // If you reach the diver's row, switch to the hunt state.
     if(y &lt;= obj_diver.y)
@@ -82,7 +98,11 @@ else if (state == "hunt")
         huntTime = huntTimeTotal;
     }
 
-    if (currentDistance &gt; distanceToMove)
+    if (paused)
+    { 
+      vspeed = 0;
+    }
+    else if (currentDistance &gt; distanceToMove)
     {
         move_towards_point(obj_diver.x, obj_diver.y, distanceToMove);
         image_angle = point_direction(x,y,obj_diver.x,obj_diver.y) - 90;

@@ -33,7 +33,7 @@ global.waveFadeTime = 15;
 
 // Enemy data
 global.sharkReachTimeBaseSeconds = 6;
-global.squidReachTimeBaseSeconds = 3.66;
+global.squidReachTimeBaseSeconds = 2;
 global.hammerReachTimeBaseSeconds = 4;
 global.enemyReachTimeMinSeconds = 0.25;
 
