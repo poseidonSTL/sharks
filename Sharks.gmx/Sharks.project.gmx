@@ -33,7 +33,7 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\GetSharkSwimSpeed.gml</script>
+    <script>scripts\GetEnemySwimSpeed.gml</script>
     <script>scripts\GetEnemySpawnTime.gml</script>
     <script>scripts\GetSharkHuntTime.gml</script>
     <script>scripts\PlayGame.gml</script>

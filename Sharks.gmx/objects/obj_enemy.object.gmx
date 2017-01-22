@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>vspeed = -GetSharkSwimSpeed();
+            <string>vspeed = -GetEnemySwimSpeed();
+image_speed = vspeed / 32;
 state = "normal"
 waveTime = 0;
 huntTime = 0;
@@ -56,6 +57,10 @@ startY = 0;
             <kind>1</kind>
             <string>if (state == "normal")
 {
+    // Move normally
+
+
+    // If you reach the diver's row, switch to the hunt state.
     if(y &lt;= obj_diver.y)
     {
         state = "hunt";
