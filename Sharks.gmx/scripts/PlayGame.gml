@@ -48,6 +48,11 @@ global.sharkSpinoutTime = 0.30;
 global.sharkScaleAtTopOfWave = 1.25;
 global.sharkTimeToTopOfWave = 1.2 * global.gameSpeed;
 
+// Percentage chance for spawning each type of enemy.
+global.sharkSpawnRate = 0.5;
+global.hammerSpawnRate = 0.25;
+global.squidSpawnRate = 0.25;
+
 //Powerup Data
 global.boardUncollectedTime = 10.0 * global.gameSpeed;
 global.boardUncollectedFadeTime = 3.0 * global.gameSpeed;

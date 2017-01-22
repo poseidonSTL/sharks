@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.boardSpawnMinY = room_height * (7/12);
+            <string>/// Spawn surfboards
+global.boardSpawnMinY = room_height * (7/12);
 global.boardSpawnMaxY = room_height * (5/6);
 
 spawnColumn = floor(random(3));
@@ -59,13 +60,20 @@ alarm[1] = global.boardSpawnTime;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>colNum = floor(random(3));
+            <string>/// Spawn enemies
+colNum = floor(random(3));
 spawnX = (room_width * (1/6)) + (colNum * (room_width/3));
 spawnY = room_height + sprite_get_height(sp_shark);
 
-enemyToSpawn = floor(random(numEnemies));
-instance_create(spawnX, spawnY, enemyType[enemyToSpawn]);
+// Choose a random enemy to spawn, using the global weights.
+var enemyToSpawn = obj_shark;
+var r = random(global.sharkSpawnRate + global.hammerSpawnRate + global.squidSpawnRate);
+if       (r &lt; (global.sharkSpawnRate                                                 )) { enemyToSpawn = obj_shark;  }
+else if  (r &lt; (global.sharkSpawnRate + global.hammerSpawnRate                        )) { enemyToSpawn = obj_hammer; }
+else if  (r &lt; (global.sharkSpawnRate + global.hammerSpawnRate + global.squidSpawnRate)) { enemyToSpawn = obj_squid;  }
 
+// Spawn the chosen enemy.
+instance_create(spawnX, spawnY, enemyToSpawn);
 spawnTime = GetEnemySpawnTime();
 alarm[0] = spawnTime;
 </string>
@@ -90,12 +98,7 @@ alarm[0] = spawnTime;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>enemyType[0] = obj_shark;
-enemyType[1] = obj_squid;
-enemyType[2] = obj_hammer;
-numEnemies = 3;
-
-alarm[0] = global.sharkSpawnStartSeconds * global.gameSpeed;
+            <string>alarm[0] = global.sharkSpawnStartSeconds * global.gameSpeed;
 alarm[1] = global.boardPowerupStartSpawn;
 
 </string>
