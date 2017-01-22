@@ -71,6 +71,7 @@
       <object>objects\obj_start</object>
       <object>objects\obj_game_over</object>
     </objects>
+    <object>objects\obj_frame</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_start</room>

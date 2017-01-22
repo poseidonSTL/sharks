@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>script_execute(InitialStartup);
 script_execute(PlayMusic, mus_Dreamy_Ocean_Theme, 1, 0);
-
+depth = 100;
 </string>
           </argument>
         </arguments>
