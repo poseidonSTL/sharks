@@ -1,6 +1,6 @@
 //Global settings
 global.gameSpeed = 30;
-global.levelupTime = 5 * global.gameSpeed;
+global.levelupTime = 7.5 * global.gameSpeed;
 
 //Diver controls
 global.wavePushTime = 10;
@@ -33,7 +33,7 @@ global.waveFadeTime = 15;
 
 // Enemy data
 global.sharkReachTimeBaseSeconds = 6;
-global.squidReachTimeBaseSeconds = 2.5;
+global.squidReachTimeBaseSeconds = 3.66;
 global.hammerReachTimeBaseSeconds = 4;
 global.enemyReachTimeMinSeconds = 0.25;
 
@@ -52,9 +52,28 @@ global.sharkScaleAtTopOfWave = 1.25;
 global.sharkTimeToTopOfWave = 1.2 * global.gameSpeed;
 
 // Percentage chance for spawning each type of enemy.
-global.sharkSpawnRate = 0.5;
-global.hammerSpawnRate = 0.25;
-global.squidSpawnRate = 0.25;
+
+global.sharkRate[4] = .33;
+global.hammerRate[4] = .33;
+global.squidRate[4] = .33;
+
+global.sharkRate[3] = .50;
+global.hammerRate[3] = .25;
+global.squidRate[3] = .25;
+
+global.sharkRate[2] = .50;
+global.hammerRate[2] = .50;
+global.squidRate[2] = 0;
+
+global.sharkRate[1] = .75;
+global.hammerRate[1] = .25;
+global.squidRate[1] = 0;
+
+global.sharkRate[0] = 1;
+global.hammerRate[0] = 0;
+global.squidRate[0] = 0;
+
+global.spawnRateCount =  5;
 
 //Powerup Data
 global.boardUncollectedTime = 10.0 * global.gameSpeed;

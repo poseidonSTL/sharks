@@ -67,15 +67,21 @@ spawnY = room_height + sprite_get_height(sp_shark);
 
 // Choose a random enemy to spawn, using the global weights.
 var enemyToSpawn = obj_shark;
-var r = random(global.sharkSpawnRate + global.hammerSpawnRate + global.squidSpawnRate);
-if       (r &lt; (global.sharkSpawnRate                                                 )) { enemyToSpawn = obj_shark;  }
-else if  (r &lt; (global.sharkSpawnRate + global.hammerSpawnRate                        )) { enemyToSpawn = obj_hammer; }
-else if  (r &lt; (global.sharkSpawnRate + global.hammerSpawnRate + global.squidSpawnRate)) { enemyToSpawn = obj_squid;  }
+var i = global.level % global.spawnRateCount;
+var sharkRate = global.sharkRate[i];
+var hammerRate = global.hammerRate[i];
+var squidRate = global.squidRate[i];
+var r = random(sharkRate + hammerRate + squidRate);
+
+if       (r &lt; (sharkRate                         )) { enemyToSpawn = obj_shark;  }
+else if  (r &lt; (sharkRate + hammerRate            )) { enemyToSpawn = obj_hammer; }
+else if  (r &lt; (sharkRate + hammerRate + squidRate)) { enemyToSpawn = obj_squid;  }
 
 // Spawn the chosen enemy.
 instance_create(spawnX, spawnY, enemyToSpawn);
 spawnTime = GetEnemySpawnTime();
 alarm[0] = spawnTime;
+
 </string>
           </argument>
         </arguments>

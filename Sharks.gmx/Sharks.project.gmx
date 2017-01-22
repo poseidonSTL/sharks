@@ -55,8 +55,8 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_diver</object>
-    <object>objects\obj_wave</object>
     <object>objects\obj_spawner</object>
+    <object>objects\obj_wave</object>
     <object>objects\obj_waveController</object>
     <object>objects\obj_master</object>
     <object>objects\obj_surfBoard</object>

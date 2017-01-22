@@ -50,6 +50,7 @@
           <argument>
             <kind>1</kind>
             <string>global.level += 1;
+show_debug_message("Level: " + string(global.level));
 </string>
           </argument>
         </arguments>
