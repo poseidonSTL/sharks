@@ -92,6 +92,6 @@ global.boardSpinTime = global.boardPowerupFadeTime;
 global.flyoutSpeed = 10;
 
 // Go to the room
-PlayMusic(gameplay_v2_amplified, 1, 5000);
+PlayMusic(gameplay_v2_amplified, 0.6, 5000);
 room_goto(rm_main);
 
