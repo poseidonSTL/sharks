@@ -73,10 +73,13 @@
           <argument>
             <kind>1</kind>
             <string>/// Increase score
-var elapsedMilliseconds = current_time - global.level_start_time;
-var elapsedHours = elapsedMilliseconds / 3600000.0;
-global.distance_swam = elapsedHours * global.driver_miles_per_hour;
-global.high_distance_swam = max(global.high_distance_swam, global.distance_swam);
+if (obj_diver.alive)
+{
+    var elapsedMilliseconds = current_time - global.level_start_time;
+    var elapsedHours = elapsedMilliseconds / 3600000.0;
+    global.distance_swam = elapsedHours * global.driver_miles_per_hour;
+    global.high_distance_swam = max(global.high_distance_swam, global.distance_swam);
+}
 </string>
           </argument>
         </arguments>

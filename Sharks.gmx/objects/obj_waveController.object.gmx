@@ -25,20 +25,23 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>COL_1_X = room_width / 3
-COL_2_X = room_width * (2/3)
-
-if(mouse_x &lt; COL_1_X)
+            <string>if (obj_diver.alive)
 {
-    instance_create(room_width / 6, 0, obj_wave);
-}
-else if(mouse_x &gt;= COL_1_X &amp;&amp; mouse_x &lt; COL_2_X)
-{
-    instance_create(room_width / 2, 0, obj_wave);
-}
-else if(mouse_x &gt;= COL_2_X)
-{
-    instance_create(room_width * (5/6), 0, obj_wave);
+    COL_1_X = room_width / 3
+    COL_2_X = room_width * (2/3)
+    
+    if(mouse_x &lt; COL_1_X)
+    {
+        instance_create(room_width / 6, 0, obj_wave);
+    }
+    else if(mouse_x &gt;= COL_1_X &amp;&amp; mouse_x &lt; COL_2_X)
+    {
+        instance_create(room_width / 2, 0, obj_wave);
+    }
+    else if(mouse_x &gt;= COL_2_X)
+    {
+        instance_create(room_width * (5/6), 0, obj_wave);
+    }
 }
 </string>
           </argument>

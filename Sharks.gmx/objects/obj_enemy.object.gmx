@@ -71,7 +71,8 @@ startY = 0;
     }
 }
 else if (state == "hunt")
-{
+{   
+    var currentDistance = point_distance(x,y,obj_diver.x, obj_diver.y);
     distance = point_distance(startX,startY,obj_diver.x,obj_diver.y);
     distanceToMove = distance / huntTimeTotal;
     
@@ -80,9 +81,17 @@ else if (state == "hunt")
     {
         huntTime = huntTimeTotal;
     }
-    
-    move_towards_point(obj_diver.x, obj_diver.y, distanceToMove);
-    image_angle = point_direction(x,y,obj_diver.x,obj_diver.y) - 90;
+
+    if (currentDistance &gt; distanceToMove)
+    {
+        move_towards_point(obj_diver.x, obj_diver.y, distanceToMove);
+        image_angle = point_direction(x,y,obj_diver.x,obj_diver.y) - 90;
+    }
+    else
+    {
+        x = obj_diver.x;
+        y = obj_diver.y;
+    }
 }
 else if (state == "spinout")
 {
