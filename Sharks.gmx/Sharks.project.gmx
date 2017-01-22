@@ -21,6 +21,7 @@
       <sound>sound\mus_Gameplay_Music</sound>
       <sound>sound\mus_Surf_theme</sound>
       <sound>sound\mus_Gameplay_Musicv2</sound>
+      <sound>sound\gameplay_v2_amplified</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">

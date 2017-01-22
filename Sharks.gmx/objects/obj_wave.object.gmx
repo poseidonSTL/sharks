@@ -118,6 +118,7 @@
           <argument>
             <kind>1</kind>
             <string>PlaySFX(wave, 0.5);
+image_speed = 0.25;
 </string>
           </argument>
         </arguments>
