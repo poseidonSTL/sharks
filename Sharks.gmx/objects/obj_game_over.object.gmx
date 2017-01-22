@@ -229,18 +229,18 @@ else
 draw_set_font(bigfont);
 draw_set_color(c_white);
 draw_set_halign(fa_center);
-draw_text(room_width/2, 625, "Game Over");
+draw_text(room_width/2, 675, "Game Over");
 
 
 draw_set_font(smallfont);
 draw_set_color(c_white);
 draw_set_halign(fa_center);
-draw_text(room_width/2, 700, "Your Score: " + string_format(global.distance_swam, 0, 3) + " miles");
+draw_text(room_width/2, 750, "Your Score: " + string_format(global.distance_swam, 0, 3) + " miles");
 
 draw_set_font(smallfont);
 draw_set_color(c_white);
 draw_set_halign(fa_center);
-draw_text(room_width/2, 750, "High Score: " + string_format(global.high_distance_swam, 0, 3) + " miles");
+draw_text(room_width/2, 800, "High Score: " + string_format(global.high_distance_swam, 0, 3) + " miles");
 </string>
           </argument>
         </arguments>
