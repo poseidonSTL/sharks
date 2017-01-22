@@ -219,7 +219,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Keyboard controls
+            <string>/// Lane Switching
+
+// Keyboard input
 if (laneSwitchTime &gt; 0)
 {
 }
@@ -244,6 +246,44 @@ else if (keyboard_check_pressed(vk_right) || keyboard_check_pressed(ord('D')))
     
     prevLaneCommand = "right";
     laneSwitchTime = 1;
+}
+
+// Movement
+if (laneSwitchTime &gt; 0)
+{
+    // Position
+    var distanceRemaining = global.laneX[targetLane] - x;
+    var dir = sign(distanceRemaining);
+    
+    var tween = 0;
+    var timeFactor = laneSwitchTime / global.laneSwitchTime;
+    if(laneSwitchTime &lt;= global.laneSwitchTime/2)
+    {
+        tween = power((timeFactor*2),2)/2;
+    }
+    else
+    {
+        tween = 0.5 + (sqrt((timeFactor - 0.5)*2)/2);
+    }
+    x = global.laneX[prevLane] + (tween * dir * global.distanceBetweenLanes);
+    
+    // Tilt
+    maxTilt = global.laneSwitchMaxTilt;
+    if(prevLaneCommand = "right")
+    {
+        maxTilt = -maxTilt;
+    }
+    tween = sin(timeFactor * pi);
+    image_angle = tween * maxTilt;
+    
+    // time tracking
+    laneSwitchTime += 1;
+    if(laneSwitchTime &gt; global.laneSwitchTime)
+    {
+        laneSwitchTime = 0;
+        prevLane = targetLane;
+        x = global.laneX[targetLane];
+    }
 }
 </string>
           </argument>
@@ -316,80 +356,6 @@ if (y &lt;= global.diver_resting_y_position)
 if (y &gt; room_height - sprite_height/2)
 {
     y = room_height - sprite_height/2;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>408</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>laneSwitchTime &gt; 0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Switch Lanes
-
-//motion
-distanceToTravel = global.laneX[targetLane] - global.laneX[prevLane];
-tween = 0;
-timeFactor = laneSwitchTime / global.laneSwitchTime;
-if( laneSwitchTime &lt;= global.laneSwitchTime/2)
-{
-    tween = power((timeFactor*2),2)/2;
-}
-else
-{
-    tween = 0.5 + (sqrt((timeFactor - 0.5)*2)/2);
-}
-resultX = global.laneX[prevLane] + (tween * distanceToTravel);
-x = resultX;
-
-//tilt
-maxTilt = global.laneSwitchMaxTilt;
-if(prevLaneCommand = "right")
-{
-    maxTilt = -maxTilt;
-}
-tween = sin(timeFactor * pi);
-image_angle = tween * maxTilt;
-
-//time tracking
-laneSwitchTime += 1;
-if(laneSwitchTime &gt; global.laneSwitchTime)
-{
-    laneSwitchTime = 0;
-    prevLane = targetLane;
-    x = global.laneX[targetLane];
 }
 </string>
           </argument>
