@@ -12,9 +12,12 @@ global.recoverSpeed = global.wavePushDistance / global.timeRecoverOneBlock;
 global.laneSwitchTime = 0.25 * global.gameSpeed;
 global.laneSwitchMaxTilt = 20;
 
-global.laneX[0] = room_width / 6;
-global.laneX[1] = room_width / 2;
-global.laneX[2] = room_width * (5/6);
+global.laneCount = 3;
+global.distanceBetweenLanes = room_width / 3;
+for (var i = 0; i < global.laneCount; i++)
+{
+  global.laneX[i] = (global.distanceBetweenLanes / 2) + (global.distanceBetweenLanes * i);
+}
 
 global.diverScaleAtTopOfWave = 1.25;
 
